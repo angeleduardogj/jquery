@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style media="screen">
+        .elem {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello world!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, laboriosam porro amet nam adipisci unde, deleniti
+        vitae modi, totam ipsum similique? Nostrum enim repellat voluptate assumenda dicta! Labore, nostrum dolorem.</p>
+    <div class="elem"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        var $elem = $('.elem')
+        
+        //Is it div?
+        $elem.is('div') && console.log('Its div')
+
+         //Is it div?
+         $elem.is('.elem') && console.log('Have element class')
+
+         //it is visible
+         $elem.is(':not(:visible)') && console.log('Element is not visible')
+
+         //Add animate
+         $elem.animate({'width':200},2000)
+
+
+         //is it animate?
+         $elem.is(':animated') && console.log('Its animate')
+    </script>
+</body>
+
+</html>
